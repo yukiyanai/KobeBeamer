@@ -119,4 +119,4 @@ To obtain the logos, you need to connect to the Kobe University's network system
 
 ## Examples
 
-You can find some examples in the [examples](examples) folder.
+You can find some examples in [examples](examples) folder.
