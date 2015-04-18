@@ -1,0 +1,43 @@
+% Beamer theme for Kobe University, ver. 0.01 (04/18/2015)
+% Copyright 2015 by Yuki Yanai <yanai@lion.kobe-u.ac.jp>
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\ProvidesPackage{beamerthemeKobe}[04/18/2015]
+\def\beamerKobe@version{0.01}
+
+\mode<presentation>
+
+\newif\ifbeamer@nonav
+\newif\ifbeamer@nologo
+\newif\ifbeamer@simplefoot
+
+\beamer@nonavfalse
+\beamer@nologofalse
+\beamer@simplefootfalse
+
+\DeclareOptionBeamer{nonav}{\beamer@nonavtrue}
+\DeclareOptionBeamer{nologo}{\beamer@nologotrue}
+\DeclareOptionBeamer{simplefoot}{\beamer@simplefoottrue}
+
+\ProcessOptionsBeamer
+\useinnertheme{rounded}
+\usecolortheme{uribo}
+\useoutertheme{Kobe}
+\usefonttheme{Kobe}
+
+\ifbeamer@nonav
+  \setbeamertemplate{navigation symbols}{}
+\fi
+
+\ifbeamer@simplefoot
+  \setbeamertemplate{footline}[frame number]
+\fi
+
+\setbeamerfont{block title}{size={}}
+
+\mode
+<all>

@@ -1,0 +1,137 @@
+% Beamer Outer Theme for Kobe Univeristy, ver 0.01 (04/18/2015)
+% Copyright 2015 by Yuki Yanai <yanai@lion.kobe-u.ac.jp>
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\ProvidesPackage{beamerouterthemeKobe}[4/18/2015]
+
+\mode<presentation>
+
+%=========================================================%
+% Logo
+%=========================================================%
+\pgfdeclareimage[height=1.8em,interpolate=true]{logomark}{logo/kobe-logo.png}
+\pgfdeclareimage[height=2.2em,interpolate=true]{logolong}{logo/kobe-logo-wide.png}
+\ifbeamer@nologo
+  \else \titlegraphic{\pgfuseimage{logolong}}
+\fi
+%=========================================================%
+% Colors and Shades
+%=========================================================%
+\setbeamercolor{section in head/foot}{parent=palette quaternary}
+\setbeamercolor{subsection in head/foot}{parent=palette primary}
+\setbeamercolor{author in head/foot}{parent=palette secondary}
+\setbeamercolor{title in head/foot}{parent=palette primary}
+\setbeamercolor{date in head/foot}{parent=palette tertiary}
+
+\usesectionheadtemplate
+  {\hfill\insertsectionhead}
+  {\hfill\color{fg!50!bg}\insertsectionhead}
+\pgfdeclarehorizontalshading[frametitle.bg,frametitle right.bg]{beamer@frametitleshade}{\paperheight}{
+  color(0pt)=(frametitle.bg);
+  color(\paperwidth)=(frametitle right.bg)}
+\AtBeginDocument{
+  \pgfdeclareverticalshading{beamer@topshade}{\paperwidth}{
+    color(0pt)=(bg);
+    color(4pt)=(black!50!bg)}
+}
+
+%=========================================================%
+% Header
+%=========================================================%
+\newif\ifbeamer@theme@subsection
+\beamer@theme@subsectiontrue
+
+\DeclareOptionBeamer{footline}{\csname beamer@theme@footline@#1\endcsname}
+\DeclareOptionBeamer{subsection}[true]{\csname beamer@theme@subsection#1\endcsname}
+\ProcessOptionsBeamer
+
+\defbeamertemplate*{headline}{Kobe theme}
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}%
+  \ifbeamer@theme@subsection
+    \begin{beamercolorbox}[colsep=1.5pt]{middle separation line head}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}%
+}
+
+%=========================================================%
+% Footer
+%=========================================================%
+\defbeamertemplate*{footline}{Kobe theme}
+{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.28\paperwidth,ht=2.25ex,dp=1ex,sep=0pt,center]{author in head/foot}%
+      \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,sep=0pt,center]{title in head/foot}
+      \usebeamerfont{title in head/foot}\insertshorttitle
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.12\paperwidth,ht=2.25ex,dp=1ex,sep=0pt,center]{date in head/foot}
+      \insertframenumber{}  / \inserttotalframenumber\hspace*{1ex}
+    \end{beamercolorbox}%
+  }%
+  \vskip0pt%
+}
+
+%=========================================================%
+% Frame Title
+%=========================================================%
+\defbeamertemplate*{frametitle}{Kobe theme}
+{
+ \nointerlineskip
+  \hbox{\leavevmode
+    \advance\beamer@leftmargin by -12bp
+    \advance\beamer@rightmargin by -12bp
+    \beamer@tempdim=\textwidth
+    \advance\beamer@tempdim by \beamer@leftmargin
+    \advance\beamer@tempdim by \beamer@rightmargin
+    \hskip-\Gm@lmargin\hbox{%
+      \setbox\beamer@tempbox=\hbox{%
+      	\begin{minipage}[b]{0.9\paperwidth}
+          \vbox{}\vskip-.75ex
+          \leftskip0.3cm
+          \rightskip0.3cm plus1fil\leavevmode
+          \insertframetitle
+          \vskip-1.75ex
+          \vbox{}%
+        \end{minipage}%
+        \begin{minipage}[c]{0.1\paperwidth}         
+          \ifbeamer@nologo \hfill 
+            \else \vbox{}\vskip-1ex\pgfuseimage{logomark}
+          \fi
+          \vskip-1.75ex
+          \vbox{}%
+         \end{minipage}}
+      \beamer@tempdim=\ht\beamer@tempbox
+      \advance\beamer@tempdim by 4pt
+      \begin{pgfpicture}{0pt}{0pt}{\paperwidth}{\beamer@tempdim}
+        \usebeamercolor{frametitle right}
+        \pgfpathrectangle{\pgfpointorigin}{\pgfpoint{\paperwidth}{\beamer@tempdim}}
+        \pgfusepath{clip}
+        \pgftext[left,bottom]{\pgfuseshading{beamer@frametitleshade}}
+      \end{pgfpicture}%
+      \hskip-\paperwidth
+      \box\beamer@tempbox
+    }
+    \hskip-\Gm@rmargin
+  }
+  \nointerlineskip
+}
+
+\mode
+<all>

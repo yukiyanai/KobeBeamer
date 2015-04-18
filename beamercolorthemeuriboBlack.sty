@@ -1,0 +1,54 @@
+% Kobe Uribo Black Beamer Color Theme, ver. 0.01 (04/18/2015)
+% Copyright 2015 by Yuki Yanai <yanai@lion.kobe-u.ac.jp>
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+
+\ProvidesPackage{beamercolorthemeuriboBlack}[4/18/2015]
+
+\mode<presentation>
+
+\definecolor{kobebrick}{RGB}{196,0,0}
+\definecolor{kobegreen}{RGB}{22,131,46}
+\definecolor{kobeblue}{RGB}{14,47,146}
+\definecolor{kobegray}{RGB}{77,77,77}
+
+\setbeamercolor*{normal text}{fg=black,bg=white}
+\setbeamercolor*{alerted text}{fg=kobebrick}
+\setbeamercolor*{example text}{fg=kobeblue}
+\setbeamercolor*{structure}{fg=kobegray,bg=white}
+
+\setbeamerfont{alerted text}{series=\bfseries}
+
+\setbeamercolor*{palette quaternary}{fg=black,bg=white}
+\setbeamercolor*{palette primary}{fg=white,bg=kobegray}
+\setbeamercolor*{palette secondary}{fg=white,bg=black}
+\setbeamercolor*{palette tertiary}{fg=white,bg=black}
+
+\setbeamercolor{titlelike}{fg=white,bg=black}
+\setbeamercolor{frametitle}{fg=kobebrick,bg=white}
+\setbeamercolor{frametitle right}{fg=kobebrick,bg=white}
+
+\setbeamercolor{sidebar}{bg=kobegreen}
+
+\setbeamercolor*{palette sidebar primary}{fg=black}
+\setbeamercolor*{palette sidebar secondary}{fg=black}
+\setbeamercolor*{palette sidebar tertiary}{fg=black}
+\setbeamercolor*{palette sidebar quaternary}{fg=black}
+
+\setbeamercolor*{item projected}{fg=black,bg=black!20}
+
+\setbeamercolor{block title}{fg=white,bg=kobeblue}
+\setbeamercolor{block title alerted}{use=alerted text,fg=white,bg=kobebrick}
+\setbeamercolor{block title example}{use=example text,fg=white,bg=kobegreen}
+\setbeamercolor{block body}{parent=normal text,use=block title,bg=block title.bg!15!bg}
+\setbeamercolor{block body alerted}{parent=normal text,use=block title alerted,bg=block title alerted.bg!15!bg}
+\setbeamercolor{block body example}{parent=normal text,use=block title example,bg=block title example.bg!15!bg}
+
+\setbeamercolor*{separation line}{}
+\setbeamercolor*{fine separation line}{}
+
+\mode
+<all>
