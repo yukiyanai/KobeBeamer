@@ -1,0 +1,14 @@
+###########################################################
+## Kobe Univeristy Logo
+###########################################################
+Since I am not allowed to distribute the official logos of Kobe University, the logo files are not available here.  You must either obtain the logos from the official website of the university or use nologo option (see Usage above).
+
+#### Getting the logos
+
+To obtain the logos, you need to connect to the Kobe University's network system. You can connect to the University's network on campus or via VPN.
+
+1. Go to the download page (http://www.kobe-u.ac.jp/info/outline/resources/logo2.html) in the Kobe Univeristy's official website.
+
+2. Download the logo (A) with the transparent background （透明背景）[direct link (http://www.ofc.kobe-u.ac.jp/kouhoushitsu/logo_app/3_Logo_png/A_C.png)] and save it as kobe-logo.png in the logo folder inside KobeBeamer folder.
+
+3. Download the logo (J) with the transparent background （透明背景）[direct link (http://www.ofc.kobe-u.ac.jp/kouhoushitsu/logo_app/3_Logo_png/J_C.png)] and save it as kobe-logo-wide.png in the logo folder inside KobeBeamer folder.
