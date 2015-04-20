@@ -17,9 +17,9 @@
 
 %% しおりの文字化けを回避する
 \usepackage{atbegshi}
-%\ifnum 42146=\euc"A4A2 \AtBeginShipoutFirst{\special{pdf:tounicode EUC-UCS2}}
-%  \else \AtBeginShipoutFirst{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
-%\fi
+\ifnum 42146=\euc"A4A2 \AtBeginShipoutFirst{\special{pdf:tounicode EUC-UCS2}}
+  \else \AtBeginShipoutFirst{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+\fi
 
 \usetheme[jp,simplefoot]{Kobe}
 
@@ -47,8 +47,8 @@
 \begin{frame}{KobeBeamerでスライドを作ろう!}
  神戸大学の公式ロゴで使用されている色：
   \begin{itemize}
-    \item \textcolor{kobebrick}{ブリック}：神戸大学のシンボル
-    \item \textcolor{kobegreen}カラー{グリーン}：山のイメージ
+    \item \textcolor{kobebrick}{ブリック}：神戸大学のシンボルカラー
+    \item \textcolor{kobegreen}{グリーン}：山のイメージ
     \item \textcolor{kobeblue}{ブルー} ：海のイメージ
     \item \textcolor{kobegray}{グレー} ：文字に使用
   \end{itemize}
