@@ -13,7 +13,7 @@ This is an *unofficial* Beamer theme for Kobe University.
 
 ## Update
 
-Version 0.02 was uploaded 04/20/2015.
+Version 0.02 was uploaded on 04/20/2015.
 
 - The alignment of frame title was fixed.
 - New option **jp**, which shows the Japanese version of the unversity logo on the title page, was added (You need to download the logo yourself in order to use this option. See **Kobe University Logo** section below).
