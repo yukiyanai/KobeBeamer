@@ -77,7 +77,7 @@ Please use **nologo** option if you have not obtained the logo files yourself fr
 
 At the moment, two color themes are available.
 
-#### Color 1: uribo
+#### Thme 1: uribo
 
 This color theme is distributed as [beamercolorthemeuribo.sty](beamercolorthemeuribo.sty).
 It uses four officially defined school colors: Kobe-Brick (RGB: 196, 0, 0), Kobe-Green (23, 131, 46), Kobe-Blue (14, 47, 146), and Kobe-Gray (77,77, 77).
@@ -90,9 +90,9 @@ To use this color theme with another Beamer theme, write in the preamble:
 \usecolortheme{uribo}  
 ```
 
-#### Color 2: uriboBlack
+#### Theme 2: uriboBlack
 
-This color theme is distributed as [beamercolorthemeuriboBlack](beamercolorthemeuriboBlack).
+This color theme is distributed as [beamercolorthemeuriboBlack.sty](beamercolorthemeuriboBlack.sty).
 
 To use this color theme, write in the preamble:
 
