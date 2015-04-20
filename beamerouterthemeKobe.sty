@@ -1,12 +1,14 @@
-% Beamer Outer Theme for Kobe Univeristy, ver 0.01 (04/18/2015)
+% Beamer Outer Theme for Kobe Univeristy, ver 0.02 (04/20/2015)
 % Copyright 2015 by Yuki Yanai <yanai@lion.kobe-u.ac.jp>
 %
 % This file may be distributed and/or modified
 %
 % 1. under the LaTeX Project Public License and/or
 % 2. under the GNU Public License.
+%% ver 0.01 (04/18/2015) YY
+%% ver 0.02 (04/20/2015) YY
 
-\ProvidesPackage{beamerouterthemeKobe}[4/18/2015]
+\ProvidesPackage{beamerouterthemeKobe}[4/20/2015]
 
 \mode<presentation>
 
@@ -15,8 +17,13 @@
 %=========================================================%
 \pgfdeclareimage[height=1.8em,interpolate=true]{logomark}{logo/kobe-logo.png}
 \pgfdeclareimage[height=2.2em,interpolate=true]{logolong}{logo/kobe-logo-wide.png}
+\pgfdeclareimage[height=2em,interpolate=true]{logojp}{logo/kobe-logo-jp.png}
 \ifbeamer@nologo
-  \else \titlegraphic{\pgfuseimage{logolong}}
+  \else
+    \ifbeamer@jp
+      \titlegraphic{\pgfuseimage{logojp}}
+      \else \titlegraphic{\pgfuseimage{logolong}}
+    \fi
 \fi
 %=========================================================%
 % Colors and Shades
@@ -92,32 +99,32 @@
 % Frame Title
 %=========================================================%
 \defbeamertemplate*{frametitle}{Kobe theme}
-{
- \nointerlineskip
-  \hbox{\leavevmode
-    \advance\beamer@leftmargin by -12bp
-    \advance\beamer@rightmargin by -12bp
-    \beamer@tempdim=\textwidth
-    \advance\beamer@tempdim by \beamer@leftmargin
-    \advance\beamer@tempdim by \beamer@rightmargin
-    \hskip-\Gm@lmargin\hbox{%
+{%
+ \nointerlineskip%
+  \hbox{\leavevmode%
+    \advance\beamer@leftmargin by -12bp%
+    \advance\beamer@rightmargin by -12bp%
+    \beamer@tempdim=\paperwidth%
+    \advance\beamer@tempdim by \beamer@leftmargin%
+    \advance\beamer@tempdim by \beamer@rightmargin%
+    \hskip-3em\hbox{%
       \setbox\beamer@tempbox=\hbox{%
-      	\begin{minipage}[b]{0.9\paperwidth}
-          \vbox{}\vskip-.75ex
-          \leftskip0.3cm
-          \rightskip0.3cm plus1fil\leavevmode
-          \insertframetitle
-          \vskip-1.75ex
+      	\begin{minipage}[b]{0.9\paperwidth}%
+          \vbox{}\vskip-.75ex%
+          \leftskip0.5cm%
+          \rightskip0.3cm plus1fil\leavevmode%
+          \insertframetitle%
+          \vskip-1.75ex%
           \vbox{}%
         \end{minipage}%
         \begin{minipage}[c]{0.1\paperwidth}         
           \ifbeamer@nologo \hfill 
-            \else \vbox{}\vskip-1ex\pgfuseimage{logomark}
+            \else \vbox{}\vskip-1ex\hskip1em\pgfuseimage{logomark}
           \fi
-          \vskip-1.75ex
+         \vskip-1.75ex
           \vbox{}%
          \end{minipage}}
-      \beamer@tempdim=\ht\beamer@tempbox
+     \beamer@tempdim=\ht\beamer@tempbox
       \advance\beamer@tempdim by 4pt
       \begin{pgfpicture}{0pt}{0pt}{\paperwidth}{\beamer@tempdim}
         \usebeamercolor{frametitle right}
@@ -125,11 +132,11 @@
         \pgfusepath{clip}
         \pgftext[left,bottom]{\pgfuseshading{beamer@frametitleshade}}
       \end{pgfpicture}%
-      \hskip-\paperwidth
-      \box\beamer@tempbox
-    }
-    \hskip-\Gm@rmargin
-  }
+      \hskip-\paperwidth%
+      \box\beamer@tempbox%
+    }%
+    \hskip-\Gm@rmargin%
+  }%
   \nointerlineskip
 }
 

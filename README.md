@@ -1,5 +1,7 @@
 # KobeBeamer
 
+**Version 0.02 uploaded**
+
 
 # LaTeX Beamer Theme for Kobe University
 
@@ -8,6 +10,13 @@
 This is an *unofficial* Beamer theme for Kobe University.
 
 ![Example](examples/example-BeamerKobe.jpg)
+
+## Update
+
+Version 0.02 was uploaded 04/20/2015.
+
+- The alignment of frame title was fixed.
+- New option **jp**, which shows the Japanese version of the unversity logo on the title page, was added (You need to download the logo yourself in order to use this option. See **Kobe University Logo** section below).
 
 ## Installation
 
@@ -45,11 +54,12 @@ Add the following line to the preamble:
 \usetheme{Kobe}
 ```
 
-Currently, three options are available.
+Currently, four options are available.
 
 1. nonav: suppress the navgaition bar
 2. nologo: does not show the university logo mark
 3. simplefoot: only the slide number is displayed in footer
+4. jp: use the Japanese version of the university logo on the title page instaed of the English one.
 
 To use these options, write in the preamble
 
@@ -66,14 +76,14 @@ or
 or
 
 ```
-\usetheme[nonav,simplefoot]{Kobe}
+\usetheme[nonav,simplefoot,jp]{Kobe}
 ```
 etc.
 
 Please use **nologo** option if you have not obtained the logo files yourself from the [Kobe University's official website](http://www.kobe-u.ac.jp) (see **Kobe University Logo** below).
 
 
-## Color Theme
+## Color Themes
 
 At the moment, two color themes are available.
 
@@ -115,8 +125,9 @@ To obtain the logos, you need to connect to the Kobe University's network system
 1. Go to [the download page](http://www.kobe-u.ac.jp/info/outline/resources/logo2.html) in the Kobe Univeristy's official website.
 2. Download the logo (A) with the transparent background （透明背景）[[direct link](http://www.ofc.kobe-u.ac.jp/kouhoushitsu/logo_app/3_Logo_png/A_C.png)] and save it as **kobe-logo.png** in the **logo** folder inside KobeBeamer folder.
 3. Download the logo (J) with the transparent background （透明背景）[[direct link](http://www.ofc.kobe-u.ac.jp/kouhoushitsu/logo_app/3_Logo_png/J_C.png)] and save it as **kobe-logo-wide.png** in the **logo** folder inside KobeBeamer folder.
+4. Download the logo (G) with the transparent background （透明背景）[[direct link](http://www.ofc.kobe-u.ac.jp/kouhoushitsu/logo_app/3_Logo_png/G_C.png)] and save it as **kobe-logo-jp.png** in the **logo** folder inside KobeBeamer folder.
 
 
 ## Examples
 
-You can find some examples in [examples](examples) folder.
+You will find some examples in [examples](examples) folder.

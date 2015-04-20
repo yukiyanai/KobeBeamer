@@ -1,26 +1,32 @@
-% Beamer theme for Kobe University, ver. 0.01 (04/18/2015)
+% Beamer theme for Kobe University, ver. 0.02 (04/20/2015)
 % Copyright 2015 by Yuki Yanai <yanai@lion.kobe-u.ac.jp>
 %
 % This file may be distributed and/or modified
 %
 % 1. under the LaTeX Project Public License and/or
 % 2. under the GNU Public License.
+%
+% ver 0.01 04/18/2015 YY
+% ver 0.02 04/20/2015 YY
 
-\ProvidesPackage{beamerthemeKobe}[04/18/2015]
-\def\beamerKobe@version{0.01}
+\ProvidesPackage{beamerthemeKobe}[04/20/2015]
+\def\beamerKobe@version{0.02}
 
 \mode<presentation>
 
 \newif\ifbeamer@nonav
 \newif\ifbeamer@nologo
+\newif\ifbeamer@jp
 \newif\ifbeamer@simplefoot
 
 \beamer@nonavfalse
 \beamer@nologofalse
+\beamer@jpfalse
 \beamer@simplefootfalse
 
 \DeclareOptionBeamer{nonav}{\beamer@nonavtrue}
 \DeclareOptionBeamer{nologo}{\beamer@nologotrue}
+\DeclareOptionBeamer{jp}{\beamer@jptrue}
 \DeclareOptionBeamer{simplefoot}{\beamer@simplefoottrue}
 
 \ProcessOptionsBeamer
